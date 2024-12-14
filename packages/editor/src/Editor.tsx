@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -163,20 +163,6 @@ export default function Editor() {
 
   return (
     <div className="editor-container">
-      {blocks.map((block, index) => (
-        <BlockWrapper
-          key={index}
-          block={block}
-          index={index}
-          updateBlockType={updateBlockType}
-          updateBlockData={updateBlockData}
-        />
-      ))}
-      <div>
-        <button onClick={() => addBlock("paragraph")}>Add Paragraph</button>
-        <button onClick={() => addBlock("header")}>Add Header</button>
-        <button onClick={() => addBlock("image")}>Add Image</button>
-      </div>
       <RichTextEditor />
     </div>
   );
